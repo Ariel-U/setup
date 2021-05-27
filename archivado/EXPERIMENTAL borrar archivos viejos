@@ -1,0 +1,15 @@
+#!/bin/sh
+rm -rf -v $(find ./ -maxdepth 1 ! -mtime -1)
+
+rm -rf $(find ./ -maxdepth 1  -type d -mtime +1)
+
+#########################
+rm -rf remueve carpetas
+$() aplica el comando en el resultado del comando dentro del parentesis
+-type d muestra carpetas
+-maxdepth 1 muestra solo archivos del directorio actual 
+-mtime +1 archivos modificados hace más de 1 dia
+-newermt 
+#####################33
+## parece que este funciona mejor
+rm -rf $(find  -maxdepth 1  -type d ! -newermt "3 days ago")
