@@ -70,7 +70,7 @@ if [ -f /usr/bin/pacman ]; then
     alias is="pacman -Qs"
     alias remove-f="sudo pacman -Rdd" # fuerza desinstalación a pesar de las dependencias
     alias huerfanos="pacman -Qdtq"  # busca paquetes huérfanos
-    alias update-mirrors="sudo reflector --country Brazil,Chile,Paraguay --protocol http,https --fastest 10 --verbose --save /etc/pacman.d/mirrorlist && yay -Syy && cat  /etc/pacman.d/mirrorlist" # (solo arch)
+    alias update-mirrors="sudo reflector --country Brazil,Chile,Paraguay --protocol http,https --fastest 10 --verbose --save /etc/pacman.d/mirrorlist && sudo pacman -Syy && cat  /etc/pacman.d/mirrorlist" # (solo arch)
     #alias update-mirrors="sudo pacman-mirrors -c Chile,Uruguay,Brazil && sudo pacman -Syy" # actualiza los mirrors de los paises dados (solo manjaro)
     alias yay="yay --aur"
 fi
