@@ -113,7 +113,7 @@ alias timeshift="sudo timeshift"
 alias {zshrc,zr}="xdg-open ~/.zshrc >/dev/null 2>&1 || $EDITOR .zshrc"
 alias {bashrc,br}="xdg-open ~/.bashrc >/dev/null 2>&1 || $EDITOR .bashrc"
 alias {nanorc,nr}="xdg-open ~/.nanorc >/dev/null 2>&1 || $EDITOR .nanorc"
-alias {aliases,al}="xdg-open ~/.aliases >/dev/null 2>&1 || $EDITOR .aliases "
+alias {aliases,al}="xdg-open ~/.bash_aliases >/dev/null 2>&1 || $EDITOR .bash_aliases "
 alias fstab="xdg-open /etc/fstab >/dev/null 2>&1 || $EDITOR /etc/fstab"
 alias redshift.conf="xdg-open ~/.config/redshift.conf >/dev/null 2>&1 || $EDITOR ~/.config/redshift.conf"
 alias rofi.conf="xdg-open ~/.config/rofi/config.rasi >/dev/null 2>&1 || $EDITOR .bashrc ~/.config/rofi/config.rasi"
@@ -148,15 +148,10 @@ alias more=less
 alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
-if [ -f /usr/bin/systemctl ]; then
-    alias {poweroff,apagar}="systemctl poweroff"
-    alias {reboot,reiniciar}="systemctl reboot"
-    alias {suspend,suspender}="systemctl suspend"
-else
-    alias {poweroff,apagar}="sudo poweroff"
-    alias {reboot,reiniciar}="sudo reboot"
-    alias {suspend,suspender}="sudo suspend"
-fi
+alias {poweroff,apagar}="systemctl poweroff"
+alias {reboot,reiniciar}="systemctl reboot"
+alias {suspend,suspender}="systemctl suspend"
+
 
 #############################
 #       FUNCIONES           #
