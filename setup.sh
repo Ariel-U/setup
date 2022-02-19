@@ -3,7 +3,7 @@
 # crear bakups
 for file in $HOME/.{bashrc,bash_aliases,zshrc}
 do
-    mv -v $file $HOME/*.bak
+    mv -v $file $HOME/$file.bak
 done
 
 # copiar configuracion
