@@ -1,6 +1,6 @@
-# config
+# setup
 configuración personal de linux
 
 ## instalación
 
-git clone https://github.com/Ariel-U/setup/ && cd setup && chmod +x install.sh && .install.sh
+git clone https://github.com/Ariel-U/setup/ && cd setup && chmod +x setup.sh && .setup.sh
