@@ -57,8 +57,8 @@ fi
 # Path
 export PATH="/home/$USER/.local/bin:$PATH"
 # Aliases
-if [ -f ~/.aliases ]; then
-    source ~/.aliases
+if [ -f ~/.bash_aliases ]; then
+    source ~/bash_aliases
 fi
 
 
