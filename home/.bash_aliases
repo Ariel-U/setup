@@ -56,7 +56,7 @@ fi
 # pacman
 if [ -f /usr/bin/pacman ]; then
     alias {update,refrescar}="sudo pacman -Syy"
-    alias {upgrade,actualizar}="sudo pacman -Syu --noconfirm" # actualiza sin pedir confirmación para instalar
+    alias {upgrade,actualizar}="sudo pacman -Syu --noconfirm && if [ -f /usr/bin/flatpak ] ; then flatpak update -y ; fi" # actualiza sin pedir confirmación para instalar
     alias {install,instalar}="sudo pacman -S"
     alias {remove,remover}="sudo pacman -R"
     alias {autoremove,limpiar}="sudo pacman -Rscn"
@@ -73,7 +73,7 @@ fi
 ## apt
 if [ -f /usr/bin/apt ]; then
   alias {update,refrescar}='sudo apt update'
-  alias {upgrade,actualizar}='sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && flatpak update -y' # actualiza sin pedir confirmación para instalar
+  alias {upgrade,actualizar}='sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && if [ -f /usr/bin/flatpak ] ; then flatpak update -y ; fi' # actualiza sin pedir confirmación para instalar
   alias {install,instalar}='sudo apt update && sudo apt install'
   alias {remove,remover}="sudo apt remove"
   alias {autoremove,limpiar}="sudo apt autoremove"
