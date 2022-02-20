@@ -34,7 +34,7 @@ PROMPT="%(!.%{$fg_bold[red]%}[%m@%n] %{$fg[white]%}[%~] %{$reset_color%}.%{$fg_b
 HISTSIZE=1000
 HISTFILESIZE=2000
 #HISTFILE=~/.cache/history
-HISTFILE=~/.bash_history
+HISTFILE=~/.zhistory
 # Enable history appending instead of overwriting.
 setopt appendhistory
 
