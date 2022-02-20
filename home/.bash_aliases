@@ -1,12 +1,6 @@
 #############################
 #         ALIASES           #
 #############################
-
-#agregar la siguiente linea a .bashrc:
-#if [ -f ~/.aliases ]; then
-#    source ~/.aliases
-#fi
-
 # navegación
 alias ..="cd .."
 alias ...="cd ../.."
@@ -24,17 +18,18 @@ alias w="which"
 alias sz="source ~/.zshrc"
 alias sb="source ~/.bashrc"
 alias restart-pulse="systemctl --user restart pulseaudio"
+alias restart-lightdm="systemctl restart lightdm"
 alias update-grub="grub-mkconfig -o /boot/grub/grub.cfg"
 
 
-# permite ejecutar aliases como sudo
+# permite ejecutar aliases con sudo
 alias sudo="sudo "
 
 
 # verbose en los comandos básicos y pedir confirmación
 alias mv="mv -vi"         #confirmar antes de sobreescribir y muestra lo que hace
 alias cp="cp -vi"         #confirmar antes de sobreescribir y muestra lo que hace
-alias rm="rm -rfv"        #muestra lo que hace
+alias rm="rm -rfv"        #muestra lo que hace. borra directorios
 alias mkdir="mkdir -pv"   #muestra lo que hace
 alias ln="ln -vi"         #confirmar antes de sobreescribir y muestra lo que hace
 
@@ -46,7 +41,7 @@ if [ -f /usr/bin/exa ]; then
     alias la="ls -a"
     #alias ll="ls -l"
     alias ll="ls -la"
-    alias tree="ls -T -L 2 --icons"
+    alias tree="ls -T -L 2"
 else
     alias ls="ls --color=auto --group-directories-first -vXH" # ordena ls
     alias l="ls -w 1"
@@ -78,7 +73,7 @@ fi
 ## apt
 if [ -f /usr/bin/apt ]; then
   alias {update,refrescar}='sudo apt update'
-  alias {upgrade,actualizar}='sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y' # actualiza sin pedir confirmación para instalar
+  alias {upgrade,actualizar}='sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && flatpak update -y' # actualiza sin pedir confirmación para instalar
   alias {install,instalar}='sudo apt update && sudo apt install'
   alias {remove,remover}="sudo apt remove"
   alias {autoremove,limpiar}="sudo apt autoremove"
@@ -110,6 +105,7 @@ alias timeshift="sudo timeshift"
 #fi
 
 # editar archivos recurrentes
+# requiere xdg-utils
 alias {zshrc,zr}="xdg-open ~/.zshrc >/dev/null 2>&1 || $EDITOR .zshrc"
 alias {bashrc,br}="xdg-open ~/.bashrc >/dev/null 2>&1 || $EDITOR .bashrc"
 alias {nanorc,nr}="xdg-open ~/.nanorc >/dev/null 2>&1 || $EDITOR .nanorc"
