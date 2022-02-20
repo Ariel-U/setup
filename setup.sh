@@ -12,5 +12,3 @@ do
     cp -v $file $HOME/
 done
 
-source $HOME/.bashrc
-cd
