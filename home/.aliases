@@ -98,7 +98,11 @@ alias timeshift="sudo timeshift"
 
 
 # establecer el editor de la terminal 
-if [ -f /bin/vim ]; then
+
+if [ -f /bin/micro ]; then
+    export EDITOR="micro"
+    alias {editar,editor,ed}=micro
+elif [ -f /bin/vim ]; then
     export EDITOR="vim"
     alias {editar,editor,ed}=vim
 elif [ -f /bin/nano ]; then

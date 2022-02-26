@@ -23,7 +23,7 @@ zstyle ':completion:*'  matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 # End of lines added by compinstall
 
 # ejecuta tmux si está instalado
-#if [ -f /usr/bin/tmux ]; then tmux ; fi
+#if [ -f /usr/bin/tmux ]; then [[ -z "$TMUX" ]] && exec tmux ; fi
 
 # Color prompt
 # Supported Colors: red, blue, green, cyan, yellow, magenta, black, & white. eg:
@@ -66,7 +66,5 @@ if [ -f /usr/bin/apt ]; then
 	source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 fi
-
-#if [ -f /usr/bin/tmux ] ; then tmux ; fi 
 
     
