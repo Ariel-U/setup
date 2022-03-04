@@ -19,6 +19,7 @@ alias w="which"
 alias sz="source ~/.zshrc"
 alias sb="source ~/.bashrc"
 alias update-grub="grub-mkconfig -o /boot/grub/grub.cfg"
+# systemd
 alias enable="sudo systemctl enable"
 alias disable="sudo systemctl disable"
 alias status="sudo systemctl status"
@@ -103,13 +104,13 @@ alias timeshift="sudo timeshift"
 # establecer el editor de la terminal 
 
 if [ -f /bin/micro ]; then
-    export EDITOR="micro"
+    export EDITOR=/bin/micro
     alias {editar,editor,ed}=micro
 elif [ -f /bin/vim ]; then
-    export EDITOR="vim"
+    export EDITOR=/bin/vim
     alias {editar,editor,ed}=vim
 elif [ -f /bin/nano ]; then
-    export EDITOR="nano"
+    export EDITOR=/bin/nano
     alias {editar,editor,ed}=nano
 fi
 
@@ -153,9 +154,9 @@ alias more=less
 alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
-alias {poweroff,apagar}="systemctl poweroff"
-alias {reboot,reiniciar}="systemctl reboot"
-alias {suspend,suspender}="systemctl suspend"
+alias {poweroff,apagar}="sudo systemctl poweroff"
+alias {reboot,reiniciar}="sudo systemctl reboot"
+alias {suspend,suspender}="sudo systemctl suspend"
 
 
 #############################
