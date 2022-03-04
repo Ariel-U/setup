@@ -18,9 +18,12 @@ alias t="touch"
 alias w="which"
 alias sz="source ~/.zshrc"
 alias sb="source ~/.bashrc"
-alias restart-pulse="systemctl --user restart pulseaudio"
-alias restart-lightdm="systemctl restart lightdm"
 alias update-grub="grub-mkconfig -o /boot/grub/grub.cfg"
+alias enable="sudo systemctl enable"
+alias disable="sudo systemctl disable"
+alias status="sudo systemctl status"
+alias restart="sudo systemctl restart"
+alias restart-pulse="systemctl --user restart pulseaudio"
 
 
 # permite ejecutar aliases con sudo
