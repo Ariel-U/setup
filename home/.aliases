@@ -20,10 +20,14 @@ alias sz="source ~/.zshrc"
 alias sb="source ~/.bashrc"
 alias update-grub="grub-mkconfig -o /boot/grub/grub.cfg"
 # systemd
+alias status="sudo systemctl status"
 alias enable="sudo systemctl enable"
 alias disable="sudo systemctl disable"
-alias status="sudo systemctl status"
+alias start="sudo systemctl start"
 alias restart="sudo systemctl restart"
+alias {poweroff,apagar}="sudo systemctl poweroff"
+alias {reboot,reiniciar}="sudo systemctl reboot"
+alias {suspend,suspender}="sudo systemctl suspend"
 alias restart-pulse="systemctl --user restart pulseaudio"
 
 
@@ -154,9 +158,7 @@ alias more=less
 alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
-alias {poweroff,apagar}="sudo systemctl poweroff"
-alias {reboot,reiniciar}="sudo systemctl reboot"
-alias {suspend,suspender}="sudo systemctl suspend"
+
 
 
 #############################
