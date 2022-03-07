@@ -19,6 +19,7 @@ alias w="which"
 alias sz="source ~/.zshrc"
 alias sb="source ~/.bashrc"
 alias update-grub="grub-mkconfig -o /boot/grub/grub.cfg"
+
 # systemd
 alias status="sudo systemctl status"
 alias enable="sudo systemctl enable"
@@ -159,9 +160,13 @@ alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
 
-alias ip-priv="hostname -I"
-alias ip-public="host myip.opendns.com resolver1.opendns.com | grep 'myip.opendns.com has' | awk '{print $4}'
-"
+# sistema
+alias private-ip="hostname -I"
+public-ip () {
+host myip.opendns.com resolver1.opendns.com | grep 'myip.opendns.com has' | awk '{print $4}'
+}
+
+
 
 #############################
 #       FUNCIONES           #
