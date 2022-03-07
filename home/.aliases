@@ -159,7 +159,9 @@ alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
 
-
+alias ip-priv="hostname -I"
+alias ip-public="host myip.opendns.com resolver1.opendns.com | grep 'myip.opendns.com has' | awk '{print $4}'
+"
 
 #############################
 #       FUNCIONES           #
@@ -214,13 +216,14 @@ function fs() {
 
 
 # get current host related info
-function sysinsfo () {
+function sysinfo () {
     echo -e "\n${BRed}System Informations:$NC " ; uname -a
     echo -e "\n${BRed}Online User:$NC " ; w -hs | cut -d "" f1 | sort | uniq
     echo -e "\n${BRed}Date :$NC " ; date
     echo -e "\n${BRed}Server stats :$NC " ; uptime
     echo -e "\n${BRed}Memory stats :$NC " ; free
-    echo -e "\n${BRed}Public ip address :$NC " ; my_ip
+    echo -e "\n${BRed}Public ip address :$NC " ; host myip.opendns.com resolver1.opendns.com | grep "myip.opendns.com has" | awk '{print $4}'
+
     echo -e "\n${BRed}Open Connections :$NC " ; netstat -pan --inet
     echo -e "\n${BRed}CPU info :$NC " ; cat /proc/cpuinfo
     echo -e "\n"
