@@ -122,23 +122,16 @@ fi
 
 # editar archivos recurrentes
 # requiere xdg-utils
-alias {zshrc,zr}="xdg-open ~/.zshrc >/dev/null 2>&1 || $EDITOR .zshrc"
-alias {bashrc,br}="xdg-open ~/.bashrc >/dev/null 2>&1 || $EDITOR .bashrc"
-alias {nanorc,nr}="xdg-open ~/.nanorc >/dev/null 2>&1 || $EDITOR .nanorc"
-alias {aliases,al}="xdg-open ~/.aliases >/dev/null 2>&1 || $EDITOR .aliases "
-alias fstab="xdg-open /etc/fstab >/dev/null 2>&1 || $EDITOR /etc/fstab"
-alias redshift.conf="xdg-open ~/.config/redshift.conf >/dev/null 2>&1 || $EDITOR ~/.config/redshift.conf"
-alias rofi.conf="xdg-open ~/.config/rofi/config.rasi >/dev/null 2>&1 || $EDITOR .bashrc ~/.config/rofi/config.rasi"
-alias pacman.conf="xdg-open /etc/pacman.conf >/dev/null 2>&1 || $EDITOR .bashrc /etc/pacman.conf"
-alias grub="xdg-open /etc/default/grub >/dev/null 2>&1 || $EDITOR /etc/default/grub "
-if [ -f /usr/bin/pacman ]; then
-    alias mirrors="xdg-open /etc/pacman.d/mirrorlist >/dev/null 2>&1 || $EDITOR .bashrc /etc/pacman.d/mirrorlist"
-elif [ -f /usr/bin/apt ]; then
-    alias mirrors="xdg-open /etc/apt/sources.list >/dev/null 2>&1 || $EDITOR /etc/apt/sources.list"
-else
-    echo "no se encontró"
-fi
-
+alias {zshrc,zr}="$EDITOR .zshrc"
+alias {bashrc,br}="$EDITOR .bashrc"
+alias {nanorc,nr}="$EDITOR .nanorc"
+alias {aliases,al}="$EDITOR .aliases "
+#alias fstab="xdg-open /etc/fstab >/dev/null 2>&1 || $EDITOR /etc/fstab"
+#alias redshift.conf="xdg-open ~/.config/redshift.conf >/dev/null 2>&1 || $EDITOR ~/.config/redshift.conf"
+#alias rofi.conf="xdg-open ~/.config/rofi/config.rasi >/dev/null 2>&1 || $EDITOR .bashrc ~/.config/rofi/config.rasi"
+#alias pacman.conf="xdg-open /etc/pacman.conf >/dev/null 2>&1 || $EDITOR .bashrc /etc/pacman.conf"
+#alias grub="xdg-open /etc/default/grub >/dev/null 2>&1 || $EDITOR /etc/default/grub "
+#if [ -f /usr/bin/pacman ]; then alias mirrors="xdg-open /etc/pacman.d/mirrorlist >/dev/null 2>&1 || $EDITOR .bashrc /etc/pacman.d/mirrorlist" ; elif [ -f /usr/bin/apt ] ; then alias mirrors="xdg-open /etc/apt/sources.list >/dev/null 2>&1 || $EDITOR /etc/apt/sources.list" ; else echo "no se encontró" ; fi
 
 # phyton
 alias py="python3"
