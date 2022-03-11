@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 # otherwhise start tmux
-if [ -f /usr/bin/tmux ] ; then [[ -z "$TMUX" ]] && exec tmux ; fi
+#if [ -f /usr/bin/tmux ] ; then [[ -z "$TMUX" ]] && exec tmux ; fi
 
 
 # Prompt
