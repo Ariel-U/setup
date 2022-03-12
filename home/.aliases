@@ -21,7 +21,7 @@ alias sb="source ~/.bashrc"
 alias update-grub="grub-mkconfig -o /boot/grub/grub.cfg"
 
 # systemd
-alias status="sudo systemctl status"
+alias status="systemctl status"
 alias enable="sudo systemctl enable"
 alias disable="sudo systemctl disable"
 alias start="sudo systemctl start"
