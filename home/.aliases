@@ -27,9 +27,9 @@ alias disable="sudo systemctl disable"
 alias start="sudo systemctl start"
 alias stop="sudo systemctl stop"
 alias restart="sudo systemctl restart"
-alias {poweroff,apagar}="sudo systemctl poweroff"
-alias {reboot,reiniciar}="sudo systemctl reboot"
-alias {suspend,suspender}="sudo systemctl suspend"
+alias {poweroff,apagar}="poweroff || sudo systemctl poweroff"
+alias {reboot,reiniciar}="reboot ||sudo systemctl reboot"
+alias {suspend,suspender}="suspend ||sudo systemctl suspend"
 alias restart-pulse="systemctl --user restart pulseaudio"
 
 
@@ -94,6 +94,13 @@ if [ -f /usr/bin/apt ]; then
   alias is="apt list --installed | grep"
 fi
 
+## dnf
+if [ -f /usr/bin/dnf ]; then
+  alias {upgrade,actualizar}='sudo dnf upgrade -y'
+  alias {install,instalar}='sudo dnf install'
+  alias {remove,remover}="sudo dnf remove"
+  alias {search,buscar}="dnf search"
+fi
 
 # flags en comandos que facilitan la vida
 alias rsync="rsync -aAXv --progress"
