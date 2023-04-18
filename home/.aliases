@@ -8,6 +8,11 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ~="cd ~"
+alias home="cd ~"
+# Navegación en WSL
+alias wc="/mnt/c"
+alias wd="/mnt/d"
+alias aw="/mnt/c/Users/Ariel"
 
 
 # atajos
