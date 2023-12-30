@@ -1,5 +1,6 @@
 #!/bin/sh
-# para calcular los valores de <--newmode> ejecutar el comando <cvt> como en el ejemplo:
+# Agrega las resoluciones de pantalla que le faltan a mi monitor. Funciona solo en X11.
+# Para calcular los valores de <--newmode> ejecutar el comando <cvt> como en el ejemplo:
 # cvt [ancho] [alto] [frecuencia]
 # ej: cvt 1920 1200 60
 
