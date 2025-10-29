@@ -1,14 +1,14 @@
 #! /bin/bash
 
 # crear bakups
-for file in $HOME/.{bashrc,aliases,zshrc,vimrc,tmux.conf}
+for file in $HOME/.{bashrc,aliases,zshrc,vimrc,tmux.conf,nanorc}
 do
     mv -v $file $file.bak
 done
 
 # copiar configuracion
-for file in ./home/.{bashrc,aliases,zshrc,vimrc,tmux.conf}
+for file in ./home/.{bashrc,aliases,zshrc,}
 do
-    cp -v $file $HOME/
+    ln -v $file $HOME/
 done
 
