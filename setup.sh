@@ -1,5 +1,6 @@
 #! /bin/bash
-
+mkdir -v $HOME/.dotfiles
+mv -vr ./* $HOME/dotfiles
 # crear bakups
 for file in $HOME/.{bashrc,aliases,zshrc,vimrc,tmux.conf,nanorc}
 do
