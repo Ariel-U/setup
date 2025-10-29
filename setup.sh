@@ -13,3 +13,6 @@ do
     ln -v $file $HOME/
 done
 
+cd $HOME
+source .bashrc
+rm -rv setup
