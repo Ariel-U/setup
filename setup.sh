@@ -15,4 +15,4 @@ done
 
 cd $HOME
 source .bashrc
-rm -rv setup
+rm -rv $HOME/setup
