@@ -1,6 +1,6 @@
 #! /bin/bash
 mkdir -v $HOME/.dotfiles
-mv -vr ./* $HOME/dotfiles
+mv -vr ./* $HOME/.dotfiles
 # crear bakups
 for file in $HOME/.{bashrc,aliases,zshrc,vimrc,tmux.conf,nanorc}
 do
@@ -8,7 +8,7 @@ do
 done
 
 # copiar configuracion
-for file in ./home/.{bashrc,aliases,zshrc,}
+for file in $HOME/.dorfiles/home/.{bashrc,aliases,zshrc,}
 do
     ln -v $file $HOME/
 done
