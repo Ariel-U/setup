@@ -1,6 +1,6 @@
 #! /bin/bash
 mkdir -v $HOME/.dotfiles
-mv -vr $HOME/setup/* $HOME/.dotfiles
+mv -vr $HOME/setup/* $HOME/.dotfiles/
 # crear bakups
 for file in $HOME/.{bashrc,aliases,zshrc,vimrc,tmux.conf,nanorc}
 do
@@ -13,6 +13,5 @@ do
     ln -v $file $HOME/
 done
 
-cd $HOME
 source .bashrc
-rm -rv $HOME/setup
+rm -rvf $HOME/setup
