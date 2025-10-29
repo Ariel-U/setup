@@ -14,4 +14,4 @@ do
 done
 
 source .bashrc
-#rm -rvf $HOME/setup
+rm -rvf $HOME/setup
