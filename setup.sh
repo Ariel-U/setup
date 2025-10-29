@@ -8,7 +8,7 @@ do
 done
 
 # copiar configuracion
-for file in $HOME/.dotfiles/home/.{bashrc,aliases,zshrc,}
+for file in $HOME/.dotfiles/home/.{bashrc,aliases,zshrc,naanorc}
 do
     ln -v $file $HOME/
 done
